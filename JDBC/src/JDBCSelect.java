@@ -23,6 +23,15 @@ public class JDBCSelect {
         //5.释放资源
         while(resultSet.next()){
             //把resultSet想象成一个表格,同时表格这里有个光标,初始情况下光标指向表最上边
+            //每次调用next,光标往下走一行
+            //当光标指向某一行的时候,就可以通过getXXX来获取当前这行里的数据
+            int id =resultSet.getInt("id");
+            String name =resultSet.getString("name");
+            System.out.println("id="+id+",name = "+name);
         }
+        resultSet.close();
+        statement.close();
+        connection.close();
+
     }
 }
