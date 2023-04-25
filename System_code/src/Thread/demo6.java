@@ -34,6 +34,12 @@ public class demo6 {
 
      t1.start();
      t2.start();
+     try{
+         t1.join();
+         t2.join();
+     } catch (InterruptedException e) {
+         e.printStackTrace();
+     }
      long end=System.currentTimeMillis();
      System.out.println(end - beg);
  }
