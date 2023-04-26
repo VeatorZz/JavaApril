@@ -13,7 +13,7 @@ public class demo12 {
         });
         t1.start();
         t1.join();
-        
+
         Thread t2 =new Thread(()->{
             System.out.println("t2 begin");
             try {
