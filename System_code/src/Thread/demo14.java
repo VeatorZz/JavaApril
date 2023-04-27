@@ -3,8 +3,10 @@ package Thread;
 class  Counter{
     //用来记数的
  public int count =0;
- void increase(){
-     count++;
+ public   void increase(){
+     synchronized(this){
+         count++;
+     }
  }
 }
 public class demo14 {
