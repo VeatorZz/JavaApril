@@ -4,10 +4,15 @@ class  Counter{
     //用来记数的
  public int count =0;
  public   void increase(){
-     synchronized(this){
          count++;
-     }
  }
+ public synchronized  static  void func1(){
+
+ }
+ public static void func2(){
+
+ }
+
 }
 public class demo14 {
 
