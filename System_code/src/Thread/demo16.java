@@ -14,6 +14,11 @@ public class demo16 {
         Thread t1 =new Thread(()->{
            while(counter.flag == 0){
                //执行循环,但是此处循环啥都不做
+               try {
+                   Thread.sleep(100);
+               } catch (InterruptedException e) {
+                   e.printStackTrace();
+               }
            }
             System.out.println("t1 结束");
         });
