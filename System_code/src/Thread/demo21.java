@@ -55,5 +55,33 @@ class MyBlockingQueue{
     }
 }
 public class demo21 {
+    public static void main(String[] args) {
+        MyBlockingQueue queue =new MyBlockingQueue();
+        Thread customer =new Thread(()->{
+           while(true){
+               try {
+                   int value =queue.take();
+               } catch (InterruptedException e) {
+                   e.printStackTrace();
+               }
+           }
+        });
+        customer.start();
+        Thread producer =new Thread(()->{
+           int value = 0;
+           while(true){
+               try {
+                   queue.put(value);
+                   System.out.println("生产"+value);
+                   value++;
+                   Thread.sleep(500);
+               } catch (InterruptedException e) {
+                   e.printStackTrace();
+               }
+
+           }
+        });
+        producer.start();
+    }
 
 }
