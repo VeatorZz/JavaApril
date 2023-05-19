@@ -3,9 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/JavaApril.iml" filepath="$PROJECT_DIR$/JavaApril.iml" />
-      <module fileurl="file://$PROJECT_DIR$/System_code/System_code.iml" filepath="$PROJECT_DIR$/System_code/System_code.iml" />
-      <module fileurl="file://$PROJECT_DIR$/pratice/pratice.iml" filepath="$PROJECT_DIR$/pratice/pratice.iml" />
-      <module fileurl="file://$PROJECT_DIR$/untitled/untitled.iml" filepath="$PROJECT_DIR$/untitled/untitled.iml" />
     </modules>
   </component>
 </project>
