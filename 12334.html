@@ -4,23 +4,37 @@
     <meta charset="UTF-8" />
     <title>Document</title>
 
-<style>
-    div{
-     width: 200px;
-     height: 100px;   
-      border: 1px solid red;
-      
-
-    }
-        
-    
-</style>
-
 </head>
 <body>
-    <div>
-        咬人猫
-    </div>
+<!-- //首先要能够生成一个随机的数字
+然后需要在页面上有一个输入框 
+接下来还需要有一个"提交按钮"
+最后还得有区域来显示结果-->
+<label>First name: <input type="text"></label>
+<button>确定</button>
+<div class="screen"></div>
+<script>
+    let input =document.querySelector('input');
+    let screen=document.querySelector('.screen');
+
+   let toGuess=Math.floor(100*Math.random()+1);
+   console.log(toGuess);
+   let button =document.querySelector('button');
+   button.onlick=function(){
+    //3.拿到输入框中的数值,然后和toGuess进行判定
+    let curNum =parseInt(input.value);
+    if(curNum<toGuess){
+        //猜低了
+        screen.innerHTML='猜低了';
+    }else if(curNum > toGuess){
+        //猜高了
+        screen.innerHTML='猜高了';
+    }else{
+        //猜对了
+        screen.innerHTML='对劲';
+    }
+   }
+</script>
 
 </body>
 </html>
