@@ -1,6 +1,32 @@
 .blog-edit-container{
     width: 1000px;
     height: calc(100%-50px);
-    margin: 0 auto;
-    
+    margin: 0 auto; 
+}
+.title{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#title{
+    height: 40px;
+    width: 895px;
+    font-size: 24px;
+    padding-left: 5px;
+    border:none;
+    outline: none;
+    border-radius: 10px;
+
+}
+#submit{
+    width: 100px;
+    height: 40px;
+    color:aliceblue;
+    background-color: orange;
+    border: none;
+    border-radius: 10px;
+}
+#submit:active{
+    background-color: grey;
 }
