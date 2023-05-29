@@ -29,4 +29,5 @@
 }
 #submit:active{
     background-color: grey;
+    opacity: 80%;
 }
